@@ -1,0 +1,97 @@
+{
+  "layer": "top",
+  "position": "left",
+  "width": 60,
+
+  "modules-left": [
+    "custom/power",
+    "group/sysinfo-group"
+  ],
+  "modules-center": [
+    "group/clock-group"
+  ],
+  "modules-right": [
+    "group/info-group"
+  ],
+
+  "custom/power": {
+    "format": "⏻",
+    "on-click": "bash ~/.config/waybar/scripts/power_menu.sh",
+    "tooltip": false
+  },
+
+  "group/sysinfo-group": {
+    "orientation": "vertical",
+    "modules": [
+      "cpu",
+      "memory"
+    ]
+  },
+
+  "group/clock-group": {
+    "orientation": "vertical",
+    "modules": [
+      "custom/clock-hour",
+      "custom/clock-minute"
+    ]
+  },
+
+  "group/info-group": {
+    "orientation": "vertical",
+    "modules": [
+      "pulseaudio",
+      "bluetooth",
+      "network"
+    ]
+  },
+
+  "cpu": {
+    "format": " \n{usage}",
+    "tooltip": false,
+    "justify": "center"
+  },
+
+  "memory": {
+    "format": " \n{}",
+    "tooltip": false,
+    "justify": "center"
+  },
+
+  "custom/clock-hour": {
+    "exec": "date +'%H'",
+    "interval": 60,
+    "format": "{}",
+    "markup": "none"
+  },
+
+  "custom/clock-minute": {
+    "exec": "date +'%M'",
+    "interval": 60,
+    "format": "{}",
+    "markup": "none"
+  },
+
+
+  "pulseaudio": {
+    "format": "{icon} {volume}%",
+    "format-muted": "🔇",
+    "on-click": "pavucontrol",
+    "justify": "center"
+  },
+
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "on-click": "blueman-manager",
+    "justify": "center"
+  },
+
+  "network": {
+    "format-wifi": "📶",
+    "format-ethernet": "🖧",
+    "format-disconnected": "❌",
+    "on-click": "nm-connection-editor",
+    "justify": "center"
+  }
+}
+

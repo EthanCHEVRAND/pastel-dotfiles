@@ -1,0 +1,42 @@
+* {
+  border: none;
+  padding: 2px;
+  font-family: JetBrainsMono, sans-serif;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+#waybar {
+  background-color: #1e1e2e;
+  min-width: 48px;
+  border-radius: 0px;
+}
+
+#custom-power,
+#sysinfo-group,
+#clock-group,
+#info-group {
+  padding: 5px;
+  margin: 4px 0;
+  background-color: #313244;
+  border-radius: 25px;
+  /* text-align: center; */
+}
+
+#custom-power {
+  font-size: 20px ;
+}
+
+#cpu, #memory {
+  border-radius: 25px;
+  margin: 4px 0;
+  background-color: #535668;
+}
+
+#clock-group {
+  padding: 15px 0;
+}
+
+#info-group > * {
+  margin: 10px 0;
+}
